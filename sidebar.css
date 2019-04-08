@@ -1,0 +1,83 @@
+#sidebar-wrapper{
+    z-index: 1;
+    position: absolute;
+    width: 0; /* By default*/
+    height: 100%;
+    overflow-y: hidden;
+    background: #f8f9fa;
+    transition: all 0.3s;
+    box-shadow: 1px 2px 1px 1px rgba(150,148,150,0.2);
+}
+
+#page-content-wrapper{
+    width:100%;
+    position: absolute;
+    padding: 15px;
+
+
+}
+
+
+/* Chage the width of the sidebar to display */
+
+#wrapper.menuDisplayed #sidebar-wrapper{
+    width:245px;
+    height: 100%;
+    transition: all 0.3s;
+
+}
+
+#wrapper.menuDisplayed #menu-toggle > .navbar-toggler-icon{
+    position: relative;
+    color:white;
+    z-index: 2;
+}
+
+
+
+#wrapper.menuDisplayed #page-content-wrapper{
+    padding-left:245px;
+    transition: all 0.3s;
+}
+
+/*Hasta tablet*/
+@media (max-width: 768px) {
+
+    #wrapper.menuDisplayed #page-content-wrapper{
+        padding-left: 0;
+        transition: all 0.3s;
+    }
+
+} 
+
+
+
+
+.sidebar-nav{
+    padding: 70px 0 0 0;
+    list-style: none;
+}
+
+.sidebar-nav li{
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a{
+    display: block;
+    text-decoration: none;
+    color:black;
+    padding-left: 30px;
+}
+
+.sidebar-nav li a:hover{
+    background: #16A085;
+}
+
+@media (min-width: 992px)
+{
+    #page-content-wrapper
+    {
+    padding-left:245px;
+    }
+}
